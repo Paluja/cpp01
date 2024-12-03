@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pjimenez <pjimenez@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/28 13:09:21 by pjimenez          #+#    #+#             */
-/*   Updated: 2024/11/29 15:55:25 by pjimenez         ###   ########.fr       */
+/*   Created: 2024/12/03 13:11:18 by pjimenez          #+#    #+#             */
+/*   Updated: 2024/12/03 13:23:15 by pjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-#include <iostream>
-#include <string>
-
-typedef std::string string;
-
-class Zombie{
-    private:
-        string name;
-        void announce();
-    public:
-        Zombie(string name);
-        Zombie* newZombie(string name);
-        void randomChump(string name);
-        ~Zombie();
-        
-};
-
-#endif
+int main()
+{
+	Weapon kat("Katana");
+	HumanA kanekro("Kanekro", kat);
+	kanekro.attack();
+	
+    Weapon gS("GreatSword");
+	HumanB juan("Juan");
+	juan.setWeapon(gS);
+	juan.attack();
+}

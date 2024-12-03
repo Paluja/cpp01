@@ -6,13 +6,13 @@
 #    By: pjimenez <pjimenez@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/20 14:18:02 by pjimenez          #+#    #+#              #
-#    Updated: 2024/11/29 15:59:16 by pjimenez         ###   ########.fr        #
+#    Updated: 2024/12/03 13:17:22 by pjimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = battle
 
-SRC = main.cpp Zombie.cpp
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

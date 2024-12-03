@@ -5,18 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pjimenez <pjimenez@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/29 14:46:42 by pjimenez          #+#    #+#             */
-/*   Updated: 2024/11/29 14:49:56 by pjimenez         ###   ########.fr       */
+/*   Created: 2024/12/02 15:46:45 by pjimenez          #+#    #+#             */
+/*   Updated: 2024/12/02 16:56:55 by pjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
+    
+typedef  std::string string;
 
 int main()
 {
-    Zombie* z = NULL;
+    string str = "HI THIS IS BRAIN";
+    string *stringPTR = &str;
+    string &stringREF = str;
 
-    z = z->newZombie("jorid");
-    z->randomChump("anastasio");
-    delete z;
+    std::cout << "str's adress : " << &str << std::endl;
+	std::cout << "str's ptr adress : " << stringPTR << std::endl;
+	std::cout << "str's ref adress : " << &stringREF << std::endl;
+
+	std::cout << "str's value : " << str << std::endl;
+	std::cout << "str's ptr value : " << *stringPTR << std::endl;
+	std::cout << "str 's ref value : " << stringREF << std::endl;
 }
