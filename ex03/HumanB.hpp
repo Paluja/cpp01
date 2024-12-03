@@ -6,20 +6,25 @@
 /*   By: pjimenez <pjimenez@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:02:53 by pjimenez          #+#    #+#             */
-/*   Updated: 2024/12/03 13:19:09 by pjimenez         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:53:52 by pjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
+
 class	HumanB
 {
 	private:
-		string name;
-		Weapon		weapon;
+		string 		name;
+		Weapon		*weapon;
 	public:
-		HumanB(string name);
+		HumanB(const string &name);
 		~HumanB(void);
 		void	attack(void);
-		void	setWeapon(Weapon weapon);
+		void	setWeapon(Weapon &weapon);
 };
+
+#endif

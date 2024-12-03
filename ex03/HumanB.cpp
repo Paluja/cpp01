@@ -6,7 +6,7 @@
 /*   By: pjimenez <pjimenez@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:02:43 by pjimenez          #+#    #+#             */
-/*   Updated: 2024/12/03 13:18:49 by pjimenez         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:56:32 by pjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include "Weapon.hpp"
 
 
-HumanB::HumanB(string name) : weapon(NULL)
+HumanB::HumanB(const string &name) :name(name), weapon(nullptr)
 {
-	this->name = name;
-	std::cout << "HumanB " << name << " created with no weapon" << std::endl;
+	std::cout << "HumanB with name " << this->name << std::endl;
+
 }
 
 HumanB::~HumanB(void)
@@ -29,10 +29,10 @@ void	HumanB::attack(void)
 {
 	
 	std::cout << this->name << " attacks with his " << \
-		this->weapon.getType() << std::endl;
+		this->weapon->getType() << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon weapon)
+void	HumanB::setWeapon(Weapon &weapon)
 {
-	this->weapon = weapon;
+	this->weapon = &weapon;
 }
