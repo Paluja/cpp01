@@ -1,0 +1,4 @@
+Create a program that takes three parameters in the following order: a wearfasdfasfd and
+two strings, s1 and s2.
+It will open the file wearfasdfasfd and copies its content into a new file
+wearfasdfasfd.replace, replacing every occurrence of s1 with s2.
